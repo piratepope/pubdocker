@@ -7,3 +7,8 @@ services:
       # <Host Port>:<Container Port>
       - 3001:3001
     restart: unless-stopped
+    networks:
+      - nginx-proxy-manager_default
+networks:
+  nginx-proxy-manager_default:
+    external: true
